@@ -56,20 +56,20 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		*//*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-		/*
+		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => "mysql:host=".getenv('OPENSHIFT_MYSQL_DB_HOST').":".getenv('OPENSHIFT_MYSQL_DB_PORT').";dbname=".getenv('OPENSHIFT_APP_NAME'),
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
+			'password' => getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
 			'charset' => 'utf8',
 		),
-		*/
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
