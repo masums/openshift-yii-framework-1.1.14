@@ -1,4 +1,3 @@
-openshift-yii-framework-1.1.14
-==============================
+The OpenShift `php` cartridge documentation can be found at:
 
-Yii Framework 1.1.14 for OpenShift quick start web application 
+https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-php/README.md
